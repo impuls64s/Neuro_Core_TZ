@@ -34,6 +34,7 @@ result = main(urls, max_active_tasks)
     python3 -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
+    export PYTHONPATH=$(pwd)
 
     pytets # Запуск тестов
 ```
