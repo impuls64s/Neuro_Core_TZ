@@ -8,7 +8,7 @@ It includes:
 import asyncio
 import logging
 import os
-from typing import Optional
+from typing import List, Optional
 
 import aiofiles
 import aiohttp
@@ -84,7 +84,7 @@ async def main(
     max_active_tasks: int,
     cred_json_path: Optional[str] = 'credentials.json',
     folder: Optional[str] = 'downloads/',
-) -> list[str]:
+) -> List[Optional[str]]:
     """
     Start the download process for the given list of URLs.
 
@@ -95,7 +95,7 @@ async def main(
         folder (str, optional): Folder to save downloaded files. Defaults to 'downloads/'.
 
     Returns:
-        list: A list containing results of the download tasks.
+        List[Optional[str]]: A list of file paths where the downloaded files are saved. If a file could not be downloaded, its entry in the list will be `None`.
     """  # noqa: E501
     logging.info(' Async Downloading '.center(80, '#'))
 
