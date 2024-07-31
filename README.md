@@ -36,5 +36,5 @@ result = main(urls, max_active_tasks)
     pip install -r requirements.txt
     export PYTHONPATH=$(pwd)
 
-    pytets # Запуск тестов
+    pytest # Запуск тестов
 ```
